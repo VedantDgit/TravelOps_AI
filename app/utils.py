@@ -95,3 +95,19 @@ def predict_flight_price(data):
     prediction = flight_model.predict(processed_data)
 
     return round(float(prediction[0]), 2)
+
+def predict_gender(data):
+
+    # Convert JSON to DataFrame
+    input_df = pd.DataFrame([data])
+
+    # Scale features
+    scaled_data = gender_scaler.transform(input_df)
+
+    # Predict encoded class
+    prediction = gender_model.predict(scaled_data)
+
+    # Convert label back to original class
+    predicted_gender = gender_label_encoder.inverse_transform(prediction)
+
+    return predicted_gender[0]

@@ -1,0 +1,6 @@
+userCode,hotelName,place,hotelPrice,days,flightType,similarity_score,query_userCode
+251,Hotel A,Florianopolis (SC),313.02,4,firstClass,0.997,0
+252,Hotel K,Salvador (BH),263.41,2,economic,1.0,5
+58,Hotel BD,Natal (RN),242.88,1,premium,0.9997,10
+25,Hotel BD,Natal (RN),242.88,4,premium,0.9716,25
+430,Hotel K,Salvador (BH),263.41,3,economic,1.0,100

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: travelops-ai-service
+
+spec:
+  selector:
+    app: travelops-ai
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+
+  type: NodePort

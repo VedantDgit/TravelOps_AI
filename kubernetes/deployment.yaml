@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: travelops-ai
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: travelops-ai
+
+  template:
+    metadata:
+      labels:
+        app: travelops-ai
+
+    spec:
+      containers:
+      - name: travelops-ai
+
+        image: vedantd400/travelops-ai:latest
+
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 5000

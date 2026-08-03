@@ -32,7 +32,57 @@ def health():
 
 @api.route("/predict-flight-price", methods=["POST"])
 def predict_price():
+    """
+    Predict Flight Price
+    ---
+    tags:
+      - Flight Prediction
 
+    consumes:
+      - application/json
+
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            from:
+              type: string
+              example: Brasilia (DF)
+            to:
+              type: string
+              example: Rio de Janeiro (RJ)
+            flightType:
+              type: string
+              example: firstClass
+            agency:
+              type: string
+              example: FlyingDrops
+            distance:
+              type: number
+              example: 830
+            time:
+              type: number
+              example: 2.5
+            year:
+              type: integer
+              example: 2021
+            month:
+              type: integer
+              example: 8
+            day:
+              type: integer
+              example: 15
+            day_of_week:
+              type: string
+              example: Sunday
+            
+    responses:
+        200:
+            description: Flight price predicted successfully        
+    """    
     try:
 
         data = request.get_json()
@@ -93,7 +143,35 @@ def predict_price():
         
 @api.route("/predict-gender", methods=["POST"])
 def gender_prediction():
+    """
+    Predict Gender
+    ---
+    tags:
+      - Gender Prediction
 
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            company:
+              type: string
+              example: "Wonka Company"
+            age:
+              type: integer
+              example: 25
+
+    responses:
+      200:
+        description: Gender predicted successfully
+      400:
+        description: Invalid request
+      500:
+        description: Internal server error
+    """    
+    
     try:
 
         data = request.get_json()
@@ -157,7 +235,31 @@ print("Recommendation route loaded")
 
 @api.route("/recommend-hotels", methods=["POST"])
 def recommend_hotels():
+    """
+    Hotel Recommendation
+    ---
+    tags:
+      - Hotel Recommendation
 
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            userCode:
+              type: integer
+              example: 25
+
+    responses:
+      200:
+        description: Hotel recommendations generated successfully
+      404:
+        description: User not found
+      500:
+        description: Internal server error
+    """
     try:
 
         data = request.get_json()

@@ -357,6 +357,23 @@ The APIs can be tested using
 - cURL
 
 ---
+## 🐳 Docker
+
+Build Image
+
+```bash
+docker build -t travelops-ai .
+```
+
+Run Container
+
+```bash
+docker run -p 5000:5000 travelops-ai
+```
+
+#### Docker Hub Repository:
+
+https://hub.docker.com/r/vedantd400/travelops-ai
 
 #  Machine Learning Models
 
@@ -367,6 +384,8 @@ The APIs can be tested using
 | Hotel Recommendation | Nearest Neighbors |
 
 ---
+
+
 
 #  Future Improvements
 

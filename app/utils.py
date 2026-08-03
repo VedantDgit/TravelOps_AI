@@ -69,7 +69,15 @@ recommendation_dataset = joblib.load(
     )
 )
 
+print("=" * 50)
 print("All models loaded successfully.")
+print("=" * 50)
+
+print("Flight Model Loaded")
+print("Gender Model Loaded")
+print("Recommendation Model Loaded")
+
+print("=" * 50)
 
 def predict_flight_price(data):
 
@@ -98,16 +106,107 @@ def predict_flight_price(data):
 
 def predict_gender(data):
 
-    # Convert JSON to DataFrame
     input_df = pd.DataFrame([data])
 
-    # Scale features
-    scaled_data = gender_scaler.transform(input_df)
+    # One Hot Encoding exactly like Notebook 4
+    input_df = pd.get_dummies(
+        input_df,
+        columns=["company"],
+        drop_first=True,
+        dtype=int
+    )
 
-    # Predict encoded class
-    prediction = gender_model.predict(scaled_data)
+    # Expected columns after training
+    expected_columns = [
+        "age",
+        "company_Acme Factory",
+        "company_Monsters CYA",
+        "company_Umbrella LTDA",
+        "company_Wonka Company"
+    ]
 
-    # Convert label back to original class
-    predicted_gender = gender_label_encoder.inverse_transform(prediction)
+    # Add missing columns
+    for col in expected_columns:
 
-    return predicted_gender[0]
+        if col not in input_df.columns:
+            input_df[col] = 0
+
+    # Correct column order
+    input_df = input_df[expected_columns]
+
+    # Scale
+    scaled = gender_scaler.transform(input_df)
+
+    # Predict
+    pred = gender_model.predict(scaled)
+
+    # Decode
+    gender = gender_label_encoder.inverse_transform(pred)
+
+    return gender[0]
+
+def recommend_for_user(
+    user_code,
+    dataset,
+    preprocessor,
+    model,
+    top_n=5
+):
+
+    user_trips = dataset[
+        dataset["userCode"] == user_code
+    ]
+
+    if user_trips.empty:
+        return f"User Code {user_code} not found in database."
+
+    sample_trip = user_trips.iloc[:1]
+
+    sample_prep = preprocessor.transform(
+        sample_trip
+    )
+
+    distances, indices = model.kneighbors(
+        sample_prep,
+        n_neighbors=top_n + 1
+    )
+
+    neighbor_indices = indices[0][1:]
+    neighbor_distances = distances[0][1:]
+
+    recommendations = dataset.iloc[
+        neighbor_indices
+    ].copy()
+
+    recommendations["similarity_score"] = (
+        1 - neighbor_distances
+    ).round(4)
+
+    result = recommendations[
+        [
+            "userCode",
+            "hotelName",
+            "place",
+            "hotelPrice",
+            "days",
+            "flightType",
+            "similarity_score"
+        ]
+    ]
+
+    return result.head(top_n)
+
+def predict_recommendation(
+    user_code,
+    top_n=5
+):
+
+    recommendations = recommend_for_user(
+        user_code=user_code,
+        dataset=recommendation_dataset,
+        preprocessor=recommendation_preprocessor,
+        model=recommendation_model,
+        top_n=top_n
+    )
+
+    return recommendations

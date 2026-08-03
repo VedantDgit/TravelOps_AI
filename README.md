@@ -1,4 +1,4 @@
-# ✈️ TravelOps AI
+#  TravelOps AI
 
 > **An AI-powered Travel Analytics Platform that predicts flight prices, predicts customer gender, and recommends personalized hotels using Machine Learning.**
 
@@ -10,15 +10,15 @@
 
 ---
 
-# 📌 Overview
+#  Overview
 
 TravelOps AI is an end-to-end Machine Learning application that provides intelligent travel analytics using historical travel data.
 
 The application consists of a Flask REST API backend and a React frontend, allowing users to:
 
-- ✈️ Predict Flight Prices
-- 👤 Predict Customer Gender
-- 🏨 Get Personalized Hotel Recommendations
+-  Predict Flight Prices
+-  Predict Customer Gender
+-  Get Personalized Hotel Recommendations
 
 The project demonstrates the complete Machine Learning lifecycle from data preprocessing to deployment.
 

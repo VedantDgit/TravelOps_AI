@@ -1,0 +1,23 @@
+artifact_path: file:///v:/TravelOps Trial/TravelOps_AI/notebooks/mlruns/1/models/m-35b0f726cef64c99aebaf63b81ed8ade/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.10.0
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.7.0
+    skops_trusted_types: null
+mlflow_version: 3.15.1
+model_id: m-35b0f726cef64c99aebaf63b81ed8ade
+model_size_bytes: 21654191
+model_uuid: m-35b0f726cef64c99aebaf63b81ed8ade
+prompts: null
+run_id: c525ac2e80214c5ba6d573fb53f65136
+utc_time_created: '2026-08-03 11:11:01.314454'

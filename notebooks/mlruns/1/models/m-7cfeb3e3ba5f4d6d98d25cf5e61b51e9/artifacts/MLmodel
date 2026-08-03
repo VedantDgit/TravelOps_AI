@@ -1,0 +1,22 @@
+artifact_path: file:///v:/TravelOps Trial/TravelOps_AI/notebooks/mlruns/1/models/m-7cfeb3e3ba5f4d6d98d25cf5e61b51e9/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.10.0
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.15.1
+model_id: m-7cfeb3e3ba5f4d6d98d25cf5e61b51e9
+model_size_bytes: 442552
+model_uuid: m-7cfeb3e3ba5f4d6d98d25cf5e61b51e9
+prompts: null
+run_id: ad80377dc8a84f3cbfe1b00e43785618
+utc_time_created: '2026-08-03 11:17:20.058589'

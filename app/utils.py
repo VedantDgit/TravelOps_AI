@@ -3,6 +3,8 @@ import sys
 import joblib
 import pandas as pd
 import sklearn.compose._column_transformer
+from app.logger import logger
+
 
 class _RemainderColsList(list):
     pass
@@ -69,81 +71,93 @@ recommendation_dataset = joblib.load(
     )
 )
 
-print("=" * 50)
-print("All models loaded successfully.")
-print("=" * 50)
+logger.info("=" * 50)
+logger.info("All models loaded successfully.")
+logger.info("Flight Price Model Loaded")
+logger.info("Gender Model Loaded")
+logger.info("Recommendation Model Loaded")
+logger.info("=" * 50)
 
-print("Flight Model Loaded")
-print("Gender Model Loaded")
-print("Recommendation Model Loaded")
 
-print("=" * 50)
 
 def predict_flight_price(data):
 
-    # Convert JSON to DataFrame
-    input_df = pd.DataFrame([data])
+    try:
 
-    # Derive date features if 'date' is provided
-    if "date" in input_df.columns:
-        date_series = pd.to_datetime(input_df["date"])
-        if "year" not in input_df.columns:
-            input_df["year"] = date_series.dt.year
-        if "month" not in input_df.columns:
-            input_df["month"] = date_series.dt.month
-        if "day" not in input_df.columns:
-            input_df["day"] = date_series.dt.day
-        if "day_of_week" not in input_df.columns:
-            input_df["day_of_week"] = date_series.dt.day_name()
+        logger.info(f"Flight Price Prediction Request: {data}")
 
-    # Apply preprocessing
-    processed_data = flight_preprocessor.transform(input_df)
+        input_df = pd.DataFrame([data])
 
-    # Predict
-    prediction = flight_model.predict(processed_data)
+        if "date" in input_df.columns:
+            date_series = pd.to_datetime(input_df["date"])
 
-    return round(float(prediction[0]), 2)
+            if "year" not in input_df.columns:
+                input_df["year"] = date_series.dt.year
+
+            if "month" not in input_df.columns:
+                input_df["month"] = date_series.dt.month
+
+            if "day" not in input_df.columns:
+                input_df["day"] = date_series.dt.day
+
+            if "day_of_week" not in input_df.columns:
+                input_df["day_of_week"] = date_series.dt.day_name()
+
+        processed_data = flight_preprocessor.transform(input_df)
+
+        prediction = flight_model.predict(processed_data)
+
+        logger.info(f"Predicted Flight Price: {prediction[0]}")
+
+        return round(float(prediction[0]), 2)
+
+    except Exception as e:
+        logger.exception("Flight Price Prediction Failed")
+        raise
 
 def predict_gender(data):
 
-    input_df = pd.DataFrame([data])
+    try:
 
-    # One Hot Encoding exactly like Notebook 4
-    input_df = pd.get_dummies(
-        input_df,
-        columns=["company"],
-        drop_first=True,
-        dtype=int
-    )
+        logger.info(f"Gender Prediction Request: {data}")
 
-    # Expected columns after training
-    expected_columns = [
-        "age",
-        "company_Acme Factory",
-        "company_Monsters CYA",
-        "company_Umbrella LTDA",
-        "company_Wonka Company"
-    ]
+        input_df = pd.DataFrame([data])
 
-    # Add missing columns
-    for col in expected_columns:
+        input_df = pd.get_dummies(
+            input_df,
+            columns=["company"],
+            drop_first=True,
+            dtype=int
+        )
 
-        if col not in input_df.columns:
-            input_df[col] = 0
+        expected_columns = [
+            "age",
+            "company_Acme Factory",
+            "company_Monsters CYA",
+            "company_Umbrella LTDA",
+            "company_Wonka Company"
+        ]
 
-    # Correct column order
-    input_df = input_df[expected_columns]
+        for col in expected_columns:
+            if col not in input_df.columns:
+                input_df[col] = 0
 
-    # Scale
-    scaled = gender_scaler.transform(input_df)
+        input_df = input_df[expected_columns]
 
-    # Predict
-    pred = gender_model.predict(scaled)
+        scaled = gender_scaler.transform(input_df)
 
-    # Decode
-    gender = gender_label_encoder.inverse_transform(pred)
+        pred = gender_model.predict(scaled)
 
-    return gender[0]
+        gender = gender_label_encoder.inverse_transform(pred)
+
+        # 👇 Prediction ke baad
+        logger.info(f"Predicted Gender: {gender[0]}")
+
+        return gender[0]
+
+    except Exception:
+        logger.exception("Gender Prediction Failed")
+        raise
 
 def recommend_for_user(
     user_code,
@@ -201,12 +215,37 @@ def predict_recommendation(
     top_n=5
 ):
 
-    recommendations = recommend_for_user(
-        user_code=user_code,
-        dataset=recommendation_dataset,
-        preprocessor=recommendation_preprocessor,
-        model=recommendation_model,
-        top_n=top_n
-    )
+    try:
 
-    return recommendations
+        logger.info(f"Recommendation Request for User: {user_code}")
+
+        recommendations = recommend_for_user(
+            user_code=user_code,
+            dataset=recommendation_dataset,
+            preprocessor=recommendation_preprocessor,
+            model=recommendation_model,
+            top_n=top_n
+        )
+
+        # If user not found
+        if isinstance(recommendations, str):
+            logger.warning(recommendations)
+            return recommendations
+
+        logger.info(
+            f"Recommendation Generated Successfully for User: {user_code}"
+        )
+
+        logger.info(
+            f"Total Recommendations Returned: {len(recommendations)}"
+        )
+
+        return recommendations
+
+    except Exception as e:
+
+        logger.exception(
+            f"Recommendation Failed for User: {user_code}"
+        )
+
+        raise

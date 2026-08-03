@@ -1,0 +1,250 @@
+2026-08-03 17:30:09,995 | INFO | ==================================================
+2026-08-03 17:30:09,995 | INFO | All models loaded successfully.
+2026-08-03 17:30:09,995 | INFO | Flight Price Model Loaded
+2026-08-03 17:30:09,996 | INFO | Gender Model Loaded
+2026-08-03 17:30:09,996 | INFO | Recommendation Model Loaded
+2026-08-03 17:30:09,996 | INFO | ==================================================
+2026-08-03 17:30:09,998 | INFO | CORS Enabled
+2026-08-03 17:30:11,783 | INFO | Swagger Initialized Successfully
+2026-08-03 17:30:11,786 | INFO | ============================================================
+2026-08-03 17:30:11,786 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:30:11,786 | INFO | API Blueprint Registered
+2026-08-03 17:30:11,786 | INFO | All Models Loaded Successfully
+2026-08-03 17:30:11,788 | INFO | ============================================================
+2026-08-03 17:30:11,788 | INFO | Registered Routes:
+2026-08-03 17:30:11,788 | INFO | Map([<Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
+ <Rule '/flasgger_static/<filename>' (GET, HEAD, OPTIONS) -> flasgger.static>,
+ <Rule '/apidocs/' (GET, HEAD, OPTIONS) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (GET, HEAD, OPTIONS) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (GET, HEAD, OPTIONS) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (GET, HEAD, OPTIONS) -> flasgger.apispec_1>,
+ <Rule '/' (GET, HEAD, OPTIONS) -> api.home>,
+ <Rule '/health' (GET, HEAD, OPTIONS) -> api.health>,
+ <Rule '/predict-flight-price' (POST, OPTIONS) -> api.predict_price>,
+ <Rule '/predict-gender' (POST, OPTIONS) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (POST, OPTIONS) -> api.recommend_hotels>])
+2026-08-03 17:30:11,850 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-03 17:30:11,851 | INFO | [33mPress CTRL+C to quit[0m
+2026-08-03 17:30:11,868 | INFO |  * Restarting with watchdog (windowsapi)
+2026-08-03 17:30:13,136 | INFO | ==================================================
+2026-08-03 17:30:13,137 | INFO | All models loaded successfully.
+2026-08-03 17:30:13,137 | INFO | Flight Price Model Loaded
+2026-08-03 17:30:13,137 | INFO | Gender Model Loaded
+2026-08-03 17:30:13,137 | INFO | Recommendation Model Loaded
+2026-08-03 17:30:13,137 | INFO | ==================================================
+2026-08-03 17:30:13,140 | INFO | CORS Enabled
+2026-08-03 17:30:14,329 | INFO | Swagger Initialized Successfully
+2026-08-03 17:30:14,331 | INFO | ============================================================
+2026-08-03 17:30:14,331 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:30:14,331 | INFO | API Blueprint Registered
+2026-08-03 17:30:14,331 | INFO | All Models Loaded Successfully
+2026-08-03 17:30:14,331 | INFO | ============================================================
+2026-08-03 17:30:14,331 | INFO | Registered Routes:
+2026-08-03 17:30:14,332 | INFO | Map([<Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+ <Rule '/flasgger_static/<filename>' (HEAD, OPTIONS, GET) -> flasgger.static>,
+ <Rule '/apidocs/' (HEAD, OPTIONS, GET) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (HEAD, OPTIONS, GET) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (HEAD, OPTIONS, GET) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (HEAD, OPTIONS, GET) -> flasgger.apispec_1>,
+ <Rule '/' (HEAD, OPTIONS, GET) -> api.home>,
+ <Rule '/health' (HEAD, OPTIONS, GET) -> api.health>,
+ <Rule '/predict-flight-price' (OPTIONS, POST) -> api.predict_price>,
+ <Rule '/predict-gender' (OPTIONS, POST) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (OPTIONS, POST) -> api.recommend_hotels>])
+2026-08-03 17:30:14,340 | WARNING |  * Debugger is active!
+2026-08-03 17:30:14,344 | INFO |  * Debugger PIN: 818-721-464
+2026-08-03 17:42:49,702 | INFO |  * Detected change in 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\logging\\__init__.py', reloading
+2026-08-03 17:42:50,132 | INFO |  * Restarting with watchdog (windowsapi)
+2026-08-03 17:42:51,458 | INFO | ==================================================
+2026-08-03 17:42:51,458 | INFO | All models loaded successfully.
+2026-08-03 17:42:51,458 | INFO | Flight Price Model Loaded
+2026-08-03 17:42:51,458 | INFO | Gender Model Loaded
+2026-08-03 17:42:51,458 | INFO | Recommendation Model Loaded
+2026-08-03 17:42:51,458 | INFO | ==================================================
+2026-08-03 17:42:51,462 | INFO | CORS Enabled
+2026-08-03 17:42:52,751 | INFO | Swagger Initialized Successfully
+2026-08-03 17:42:52,753 | INFO | ============================================================
+2026-08-03 17:42:52,753 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:42:52,753 | INFO | API Blueprint Registered
+2026-08-03 17:42:52,753 | INFO | All Models Loaded Successfully
+2026-08-03 17:42:52,753 | INFO | ============================================================
+2026-08-03 17:42:52,754 | INFO | Registered Routes:
+2026-08-03 17:42:52,754 | INFO | Map([<Rule '/static/<filename>' (GET, OPTIONS, HEAD) -> static>,
+ <Rule '/flasgger_static/<filename>' (GET, OPTIONS, HEAD) -> flasgger.static>,
+ <Rule '/apidocs/' (GET, OPTIONS, HEAD) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (GET, OPTIONS, HEAD) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (GET, OPTIONS, HEAD) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (GET, OPTIONS, HEAD) -> flasgger.apispec_1>,
+ <Rule '/' (GET, OPTIONS, HEAD) -> api.home>,
+ <Rule '/health' (GET, OPTIONS, HEAD) -> api.health>,
+ <Rule '/predict-flight-price' (POST, OPTIONS) -> api.predict_price>,
+ <Rule '/predict-gender' (POST, OPTIONS) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (POST, OPTIONS) -> api.recommend_hotels>])
+2026-08-03 17:42:52,763 | WARNING |  * Debugger is active!
+2026-08-03 17:42:52,766 | INFO |  * Debugger PIN: 818-721-464
+2026-08-03 17:46:57,551 | INFO |  * Detected change in 'V:\\TravelOps Trial\\TravelOps_AI\\app\\routes.py', reloading
+2026-08-03 17:46:57,918 | INFO |  * Restarting with watchdog (windowsapi)
+2026-08-03 17:46:59,198 | INFO | ==================================================
+2026-08-03 17:46:59,198 | INFO | All models loaded successfully.
+2026-08-03 17:46:59,198 | INFO | Flight Price Model Loaded
+2026-08-03 17:46:59,198 | INFO | Gender Model Loaded
+2026-08-03 17:46:59,198 | INFO | Recommendation Model Loaded
+2026-08-03 17:46:59,198 | INFO | ==================================================
+2026-08-03 17:46:59,201 | INFO | CORS Enabled
+2026-08-03 17:47:00,361 | INFO | Swagger Initialized Successfully
+2026-08-03 17:47:00,363 | INFO | ============================================================
+2026-08-03 17:47:00,363 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:47:00,363 | INFO | API Blueprint Registered
+2026-08-03 17:47:00,363 | INFO | All Models Loaded Successfully
+2026-08-03 17:47:00,364 | INFO | ============================================================
+2026-08-03 17:47:00,364 | INFO | Registered Routes:
+2026-08-03 17:47:00,364 | INFO | Map([<Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+ <Rule '/flasgger_static/<filename>' (HEAD, OPTIONS, GET) -> flasgger.static>,
+ <Rule '/apidocs/' (HEAD, OPTIONS, GET) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (HEAD, OPTIONS, GET) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (HEAD, OPTIONS, GET) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (HEAD, OPTIONS, GET) -> flasgger.apispec_1>,
+ <Rule '/' (HEAD, OPTIONS, GET) -> api.home>,
+ <Rule '/health' (HEAD, OPTIONS, GET) -> api.health>,
+ <Rule '/predict-flight-price' (OPTIONS, POST) -> api.predict_price>,
+ <Rule '/predict-gender' (OPTIONS, POST) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (OPTIONS, POST) -> api.recommend_hotels>])
+2026-08-03 17:47:00,375 | WARNING |  * Debugger is active!
+2026-08-03 17:47:00,378 | INFO |  * Debugger PIN: 818-721-464
+2026-08-03 17:51:30,044 | INFO |  * Detected change in 'V:\\TravelOps Trial\\TravelOps_AI\\app\\routes.py', reloading
+2026-08-03 17:51:30,393 | INFO |  * Restarting with watchdog (windowsapi)
+2026-08-03 17:51:31,684 | INFO | ==================================================
+2026-08-03 17:51:31,684 | INFO | All models loaded successfully.
+2026-08-03 17:51:31,684 | INFO | Flight Price Model Loaded
+2026-08-03 17:51:31,684 | INFO | Gender Model Loaded
+2026-08-03 17:51:31,684 | INFO | Recommendation Model Loaded
+2026-08-03 17:51:31,684 | INFO | ==================================================
+2026-08-03 17:51:31,687 | INFO | CORS Enabled
+2026-08-03 17:51:32,845 | INFO | Swagger Initialized Successfully
+2026-08-03 17:51:32,847 | INFO | ============================================================
+2026-08-03 17:51:32,847 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:51:32,847 | INFO | API Blueprint Registered
+2026-08-03 17:51:32,847 | INFO | All Models Loaded Successfully
+2026-08-03 17:51:32,847 | INFO | ============================================================
+2026-08-03 17:51:32,847 | INFO | Registered Routes:
+2026-08-03 17:51:32,847 | INFO | Map([<Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+ <Rule '/flasgger_static/<filename>' (HEAD, OPTIONS, GET) -> flasgger.static>,
+ <Rule '/apidocs/' (HEAD, OPTIONS, GET) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (HEAD, OPTIONS, GET) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (HEAD, OPTIONS, GET) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (HEAD, OPTIONS, GET) -> flasgger.apispec_1>,
+ <Rule '/' (HEAD, OPTIONS, GET) -> api.home>,
+ <Rule '/health' (HEAD, OPTIONS, GET) -> api.health>,
+ <Rule '/predict-flight-price' (OPTIONS, POST) -> api.predict_price>,
+ <Rule '/predict-gender' (OPTIONS, POST) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (OPTIONS, POST) -> api.recommend_hotels>])
+2026-08-03 17:51:32,856 | WARNING |  * Debugger is active!
+2026-08-03 17:51:32,859 | INFO |  * Debugger PIN: 818-721-464
+2026-08-03 17:51:50,711 | INFO | ==================================================
+2026-08-03 17:51:50,711 | INFO | All models loaded successfully.
+2026-08-03 17:51:50,711 | INFO | Flight Price Model Loaded
+2026-08-03 17:51:50,711 | INFO | Gender Model Loaded
+2026-08-03 17:51:50,711 | INFO | Recommendation Model Loaded
+2026-08-03 17:51:50,711 | INFO | ==================================================
+2026-08-03 17:51:50,715 | INFO | CORS Enabled
+2026-08-03 17:51:51,858 | INFO | Swagger Initialized Successfully
+2026-08-03 17:51:51,860 | INFO | ============================================================
+2026-08-03 17:51:51,860 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:51:51,860 | INFO | API Blueprint Registered
+2026-08-03 17:51:51,860 | INFO | All Models Loaded Successfully
+2026-08-03 17:51:51,860 | INFO | ============================================================
+2026-08-03 17:51:51,861 | INFO | Registered Routes:
+2026-08-03 17:51:51,861 | INFO | Map([<Rule '/static/<filename>' (OPTIONS, GET, HEAD) -> static>,
+ <Rule '/flasgger_static/<filename>' (OPTIONS, GET, HEAD) -> flasgger.static>,
+ <Rule '/apidocs/' (OPTIONS, GET, HEAD) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (OPTIONS, GET, HEAD) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (OPTIONS, GET, HEAD) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (OPTIONS, GET, HEAD) -> flasgger.apispec_1>,
+ <Rule '/' (OPTIONS, GET, HEAD) -> api.home>,
+ <Rule '/health' (OPTIONS, GET, HEAD) -> api.health>,
+ <Rule '/predict-flight-price' (OPTIONS, POST) -> api.predict_price>,
+ <Rule '/predict-gender' (OPTIONS, POST) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (OPTIONS, POST) -> api.recommend_hotels>])
+2026-08-03 17:51:51,876 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-03 17:51:51,876 | INFO | [33mPress CTRL+C to quit[0m
+2026-08-03 17:51:51,884 | INFO |  * Restarting with watchdog (windowsapi)
+2026-08-03 17:51:53,064 | INFO | ==================================================
+2026-08-03 17:51:53,065 | INFO | All models loaded successfully.
+2026-08-03 17:51:53,065 | INFO | Flight Price Model Loaded
+2026-08-03 17:51:53,065 | INFO | Gender Model Loaded
+2026-08-03 17:51:53,065 | INFO | Recommendation Model Loaded
+2026-08-03 17:51:53,065 | INFO | ==================================================
+2026-08-03 17:51:53,068 | INFO | CORS Enabled
+2026-08-03 17:51:54,237 | INFO | Swagger Initialized Successfully
+2026-08-03 17:51:54,238 | INFO | ============================================================
+2026-08-03 17:51:54,238 | INFO | TravelOps AI Server Started Successfully
+2026-08-03 17:51:54,238 | INFO | API Blueprint Registered
+2026-08-03 17:51:54,239 | INFO | All Models Loaded Successfully
+2026-08-03 17:51:54,239 | INFO | ============================================================
+2026-08-03 17:51:54,239 | INFO | Registered Routes:
+2026-08-03 17:51:54,239 | INFO | Map([<Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/flasgger_static/<filename>' (HEAD, GET, OPTIONS) -> flasgger.static>,
+ <Rule '/apidocs/' (HEAD, GET, OPTIONS) -> flasgger.apidocs>,
+ <Rule '/oauth2-redirect.html' (HEAD, GET, OPTIONS) -> flasgger.oauth_redirect>,
+ <Rule '/apidocs/index.html' (HEAD, GET, OPTIONS) -> flasgger.<lambda>>,
+ <Rule '/apispec_1.json' (HEAD, GET, OPTIONS) -> flasgger.apispec_1>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> api.home>,
+ <Rule '/health' (HEAD, GET, OPTIONS) -> api.health>,
+ <Rule '/predict-flight-price' (POST, OPTIONS) -> api.predict_price>,
+ <Rule '/predict-gender' (POST, OPTIONS) -> api.gender_prediction>,
+ <Rule '/recommend-hotels' (POST, OPTIONS) -> api.recommend_hotels>])
+2026-08-03 17:51:54,247 | WARNING |  * Debugger is active!
+2026-08-03 17:51:54,250 | INFO |  * Debugger PIN: 818-721-464
+2026-08-03 17:53:09,945 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:09] "GET / HTTP/1.1" 200 -
+2026-08-03 17:53:25,354 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:25] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2026-08-03 17:53:25,525 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:25] "GET /apidocs/ HTTP/1.1" 200 -
+2026-08-03 17:53:25,623 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:25] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-08-03 17:53:25,688 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:25] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-08-03 17:53:25,987 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:25] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-08-03 17:53:26,922 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:26] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-08-03 17:53:26,981 | INFO | 127.0.0.1 - - [03/Aug/2026 17:53:26] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-08-03 17:54:26,815 | INFO | 127.0.0.1 - - [03/Aug/2026 17:54:26] "[31m[1mGET /predict-flight-price HTTP/1.1[0m" 405 -
+2026-08-03 17:55:18,313 | INFO | 127.0.0.1 - - [03/Aug/2026 17:55:18] "[31m[1mGET /predict-flight-price HTTP/1.1[0m" 405 -
+2026-08-03 17:56:08,118 | INFO | 127.0.0.1 - - [03/Aug/2026 17:56:08] "GET /apidocs/ HTTP/1.1" 200 -
+2026-08-03 17:56:08,141 | INFO | 127.0.0.1 - - [03/Aug/2026 17:56:08] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2026-08-03 17:56:08,142 | INFO | 127.0.0.1 - - [03/Aug/2026 17:56:08] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2026-08-03 17:56:08,143 | INFO | 127.0.0.1 - - [03/Aug/2026 17:56:08] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2026-08-03 17:56:08,143 | INFO | 127.0.0.1 - - [03/Aug/2026 17:56:08] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2026-08-03 17:56:08,282 | INFO | 127.0.0.1 - - [03/Aug/2026 17:56:08] "GET /apispec_1.json HTTP/1.1" 200 -
+2026-08-03 17:58:19,367 | INFO | Flight Price Prediction API Called
+2026-08-03 17:58:19,368 | INFO | Request Data: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:19,368 | INFO | Flight Price Prediction Request: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:19,378 | INFO | Predicted Flight Price: 1647.5479736328125
+2026-08-03 17:58:19,378 | INFO | Predicted Flight Price: 1647.55
+2026-08-03 17:58:19,378 | INFO | Execution Time: 0.011 sec
+2026-08-03 17:58:19,379 | INFO | 127.0.0.1 - - [03/Aug/2026 17:58:19] "POST /predict-flight-price HTTP/1.1" 200 -
+2026-08-03 17:58:23,478 | INFO | Flight Price Prediction API Called
+2026-08-03 17:58:23,478 | INFO | Request Data: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:23,478 | INFO | Flight Price Prediction Request: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:23,486 | INFO | Predicted Flight Price: 1647.5479736328125
+2026-08-03 17:58:23,486 | INFO | Predicted Flight Price: 1647.55
+2026-08-03 17:58:23,486 | INFO | Execution Time: 0.009 sec
+2026-08-03 17:58:23,487 | INFO | 127.0.0.1 - - [03/Aug/2026 17:58:23] "POST /predict-flight-price HTTP/1.1" 200 -
+2026-08-03 17:58:24,590 | INFO | Flight Price Prediction API Called
+2026-08-03 17:58:24,590 | INFO | Request Data: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:24,590 | INFO | Flight Price Prediction Request: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:24,598 | INFO | Predicted Flight Price: 1647.5479736328125
+2026-08-03 17:58:24,598 | INFO | Predicted Flight Price: 1647.55
+2026-08-03 17:58:24,598 | INFO | Execution Time: 0.008 sec
+2026-08-03 17:58:24,599 | INFO | 127.0.0.1 - - [03/Aug/2026 17:58:24] "POST /predict-flight-price HTTP/1.1" 200 -
+2026-08-03 17:58:25,166 | INFO | Flight Price Prediction API Called
+2026-08-03 17:58:25,166 | INFO | Request Data: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:25,166 | INFO | Flight Price Prediction Request: {'agency': 'FlyingDrops', 'day': 15, 'day_of_week': 'Sunday', 'distance': 830, 'flightType': 'firstClass', 'from': 'Brasilia (DF)', 'month': 8, 'time': 2.5, 'to': 'Rio de Janeiro (RJ)', 'year': 2021}
+2026-08-03 17:58:25,173 | INFO | Predicted Flight Price: 1647.5479736328125
+2026-08-03 17:58:25,173 | INFO | Predicted Flight Price: 1647.55
+2026-08-03 17:58:25,173 | INFO | Execution Time: 0.008 sec
+2026-08-03 17:58:25,174 | INFO | 127.0.0.1 - - [03/Aug/2026 17:58:25] "POST /predict-flight-price HTTP/1.1" 200 -
+2026-08-03 17:59:31,807 | INFO | Gender Prediction API Called
+2026-08-03 17:59:31,807 | INFO | Request Data: {'age': 25, 'company': 'Wonka Company'}
+2026-08-03 17:59:31,807 | INFO | Gender Prediction Request: {'age': 25, 'company': 'Wonka Company'}
+2026-08-03 17:59:31,816 | INFO | Predicted Gender: none
+2026-08-03 17:59:31,816 | INFO | Predicted Gender: none
+2026-08-03 17:59:31,816 | INFO | Execution Time: 0.008 sec
+2026-08-03 17:59:31,816 | INFO | 127.0.0.1 - - [03/Aug/2026 17:59:31] "POST /predict-gender HTTP/1.1" 200 -

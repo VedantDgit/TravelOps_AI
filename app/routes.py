@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
-
+import time
+from app.logger import logger
 from app.utils import (
     predict_flight_price,
     predict_gender,
@@ -82,13 +83,18 @@ def predict_price():
     responses:
         200:
             description: Flight price predicted successfully        
-    """    
+    """
+    start_time = time.time()     
     try:
-
+        
+        logger.info("Flight Price Prediction API Called")
+         
         data = request.get_json()
-
+        logger.info(f"Request Data: {data}")
         # Check if request body exists
         if not data:
+            logger.warning("Request body is missing.")
+            
             return jsonify({
                 "success": False,
                 "message": "Request body is missing."
@@ -119,7 +125,8 @@ def predict_price():
                 missing_fields.append(field)
 
         if len(missing_fields) > 0:
-
+            logger.warning(f"Missing Fields: {missing_fields}")
+            
             return jsonify({
                 "success": False,
                 "message": "Missing required fields.",
@@ -127,7 +134,12 @@ def predict_price():
             }), 400
 
         prediction = predict_flight_price(data)
+        execution_time = round(time.time() - start_time, 3)
+        
+        logger.info(f"Predicted Flight Price: {prediction}")
+        logger.info(f"Execution Time: {execution_time} sec")
 
+        
         return jsonify({
             "success": True,
             "message": "Flight price predicted successfully.",
@@ -135,7 +147,8 @@ def predict_price():
         }), 200
 
     except Exception as e:
-
+        logger.exception("Flight Price Prediction Failed")
+        
         return jsonify({
             "success": False,
             "error": str(e)
@@ -170,13 +183,22 @@ def gender_prediction():
         description: Invalid request
       500:
         description: Internal server error
-    """    
-    
+    """
+
+    start_time = time.time()
+
     try:
+
+        logger.info("Gender Prediction API Called")
 
         data = request.get_json()
 
+        logger.info(f"Request Data: {data}")
+
         if not data:
+
+            logger.warning("Request body is missing.")
+
             return jsonify({
                 "success": False,
                 "message": "Request body is missing."
@@ -192,23 +214,25 @@ def gender_prediction():
         for field in required_fields:
 
             if field not in data:
-
                 missing.append(field)
 
         if len(missing) > 0:
+
+            logger.warning(f"Missing Fields: {missing}")
 
             return jsonify({
                 "success": False,
                 "message": "Missing required fields.",
                 "missing_fields": missing
             }), 400
-            
-        # Validate age
 
+        # Validate age
         try:
             data["age"] = int(data["age"])
 
         except (ValueError, TypeError):
+
+            logger.warning("Invalid age received.")
 
             return jsonify({
                 "success": False,
@@ -216,6 +240,11 @@ def gender_prediction():
             }), 400
 
         prediction = predict_gender(data)
+
+        execution_time = round(time.time() - start_time, 3)
+
+        logger.info(f"Predicted Gender: {prediction}")
+        logger.info(f"Execution Time: {execution_time} sec")
 
         return jsonify({
             "success": True,
@@ -225,10 +254,13 @@ def gender_prediction():
 
     except Exception as e:
 
+        logger.exception("Gender Prediction Failed")
+
         return jsonify({
             "success": False,
             "error": str(e)
         }), 500
+
 
 print("Recommendation route loaded")
 
@@ -260,11 +292,20 @@ def recommend_hotels():
       500:
         description: Internal server error
     """
+
+    start_time = time.time()
+
     try:
+
+        logger.info("Hotel Recommendation API Called")
 
         data = request.get_json()
 
+        logger.info(f"Request Data: {data}")
+
         if not data:
+
+            logger.warning("Request body is missing.")
 
             return jsonify({
                 "success": False,
@@ -272,6 +313,8 @@ def recommend_hotels():
             }), 400
 
         if "userCode" not in data:
+
+            logger.warning("userCode is missing.")
 
             return jsonify({
                 "success": False,
@@ -284,6 +327,8 @@ def recommend_hotels():
 
         except (ValueError, TypeError):
 
+            logger.warning("Invalid userCode received.")
+
             return jsonify({
                 "success": False,
                 "message": "userCode must be an integer."
@@ -295,10 +340,22 @@ def recommend_hotels():
 
         if isinstance(recommendations, str):
 
+            logger.warning(recommendations)
+
             return jsonify({
                 "success": False,
                 "message": recommendations
             }), 404
+
+        execution_time = round(time.time() - start_time, 3)
+
+        logger.info(
+            f"Recommendations generated successfully for User: {user_code}"
+        )
+
+        logger.info(
+            f"Execution Time: {execution_time} sec"
+        )
 
         return jsonify({
             "success": True,
@@ -309,6 +366,8 @@ def recommend_hotels():
         }), 200
 
     except Exception as e:
+
+        logger.exception("Hotel Recommendation Failed")
 
         return jsonify({
             "success": False,

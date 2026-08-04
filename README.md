@@ -7,18 +7,28 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
 ![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
 ![License](https://img.shields.io/badge/License-MIT-green)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Deployed-326CE5?logo=kubernetes)
+![MLflow](https://img.shields.io/badge/MLflow-Tracking-0194E2)
+![Swagger](https://img.shields.io/badge/Swagger-API_Docs-85EA2D?logo=swagger)
+![Vercel](https://img.shields.io/badge/Vercel-Frontend-black?logo=vercel)
 
 ---
 
 #  Overview
 
-TravelOps AI is an end-to-end Machine Learning application that provides intelligent travel analytics using historical travel data.
+TravelOps AI is a full-stack AI-powered travel analytics platform that integrates multiple machine learning models into a modern web application.
 
-The application consists of a Flask REST API backend and a React frontend, allowing users to:
+The project demonstrates an end-to-end MLOps workflow, including data preprocessing, model training, experiment tracking with MLflow, REST API development using Flask, Docker containerization, Kubernetes deployment, and a responsive React dashboard.
+
+Users can:
 
 -  Predict Flight Prices
 -  Predict Customer Gender
--  Get Personalized Hotel Recommendations
+-  Receive Personalized Hotel Recommendations
+- 📊Interact through a modern React Dashboard
 
 The project demonstrates the complete Machine Learning lifecycle from data preprocessing to deployment.
 
@@ -375,6 +385,14 @@ docker run -p 5000:5000 travelops-ai
 
 https://hub.docker.com/r/vedantd400/travelops-ai
 
+# Kubernetes
+
+Deploy
+
+```bash
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
 #  Machine Learning Models
 
 | Module | Algorithm |
@@ -384,19 +402,47 @@ https://hub.docker.com/r/vedantd400/travelops-ai
 | Hotel Recommendation | Nearest Neighbors |
 
 ---
+# Screenshots
+
+## Dashboard
+<img width="2856" height="1324" alt="image" src="https://github.com/user-attachments/assets/4253e86a-0b6f-4eee-8f32-a6e7f0bea4ae" />
+
+
+
+## Flight Prediction
+<img width="2854" height="1325" alt="image" src="https://github.com/user-attachments/assets/3c3bcbf7-0657-49de-bb9f-0b417596ac7e" />
+
+
+## Gender Prediction
+<img width="2849" height="1291" alt="image" src="https://github.com/user-attachments/assets/7038a4b6-f35d-4d9e-a2e9-b558dcb05ab5" />
+
+
+## Hotel Recommendation
+<img width="2855" height="1313" alt="image" src="https://github.com/user-attachments/assets/cc89fcbd-ce3d-44bb-901a-e6e63ccfa2c8" />
+
+
+## Swagger
+<img width="2856" height="1456" alt="image" src="https://github.com/user-attachments/assets/5917f86d-eeaf-453f-aa07-a6262c4aa7d9" />
+
+
+
+## MLflow
+<img width="2851" height="1473" alt="image" src="https://github.com/user-attachments/assets/29a63717-f70c-4429-bed2-beb755313445" />
+
 
 
 
 #  Future Improvements
 
-- JWT Authentication
-- User Login
-- Hotel Booking Integration
-- Flight Booking Integration
-- Docker Support
-- Kubernetes Deployment
-- CI/CD Pipeline
-- Cloud Database Integration
+- Authentication
+- User Accounts
+- Booking Integration
+- Dynamic Flight Dropdowns
+- Live Flight APIs
+- Payment Gateway
+- CI/CD using GitHub Actions
+- Monitoring with Prometheus & Grafana
+- Cloud Deployment on AWS/Azure/GCP
 
 ---
 
